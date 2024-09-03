@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <!-- TextView untuk judul utama-->
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PT XYZ"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <!-- ImageView untuk ikon lokasi -->
+    <ImageView
+        android:id="@+id/txt_location"
+        android:src="@drawable/outline_location_on_24"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/txt_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        app:tint="#FF7043" />
+
+    <!-- TextView untuk lokasi -->
+    <TextView
+        android:id="@+id/txt_locationn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleman"
+        android:layout_below="@id/txt_location"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_alignTop="@+id/txt_location"
+        android:layout_toRightOf="@+id/txt_location"
+        />
+
+    <!-- Kotak Informasi Pembaruan -->
+    <RelativeLayout
+        android:id="@+id/update_info_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:layout_below="@id/txt_location"
+        android:padding="12dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="25dp">
+
+        <!-- TextView untuk informasi pembaruan data -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informasi perubahan data katalog"
+            android:textColor="#9D9D9D"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <!-- Label pembaruan terakhir -->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembaruan terakhir:"
+            android:textColor="#9D9D9D"
+            android:textSize="14sp"
+            android:layout_below="@id/textView1"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            />
+
+        <!-- Tanggal pembaruan terakhir -->
+        <TextView
+            android:id="@+id/textView2_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16-06-2022 15:00:01"
+            android:textStyle="bold"
+            android:textColor="#EE6627"
+            android:textSize="14sp"
+            android:layout_toEndOf="@id/textView2"
+            android:layout_alignBaseline="@id/textView2"
+            />
+
+        <!-- Label pembaruan selanjutnya -->
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembaruan selanjutnya:"
+            android:textColor="#9D9D9D"
+            android:textSize="14sp"
+            android:layout_below="@id/textView2"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            />
+
+        <!-- Tanggal pembaruan selanjutnya -->
+        <TextView
+            android:id="@+id/textView3_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17-06-2022 15:00:01"
+            android:textColor="#FF5722"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_toEndOf="@id/textView3"
+            android:layout_alignBaseline="@id/textView3"
+            />
+
+    </RelativeLayout>
+
+    <!-- GridLayout untuk menampilkan tombol menu -->
+    <GridLayout
+        android:id="@+id/menu_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/update_info_box"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:layout_marginHorizontal="8dp">
+
+        <!-- Tombol 1: Katalog Tender -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_corners2"
+            android:padding="16dp">
+
+            <!-- Ikon untuk Katalog Tender -->
+            <ImageView
+                android:id="@+id/icon_katalog"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/baseline_manage_search_24"
+                app:tint="#FF7043"
+                android:layout_centerHorizontal="true"
+                />
+
+            <!-- Teks untuk Katalog Tender -->
+            <TextView
+                android:id="@+id/text_katalog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Katalog Tender"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_below="@+id/icon_katalog"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                />
+
+        </RelativeLayout>
+
+        <!-- Tombol 2: Tender Tersimpan -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_corners2"
+            android:padding="16dp">
+
+            <!-- Ikon untuk Tender Tersimpan -->
+            <ImageView
+                android:id="@+id/icon_tender_tersimpan"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:tint="#FF7043"
+                android:src="@drawable/baseline_bookmark_added_24"
+                android:layout_centerHorizontal="true"
+                />
+
+            <!-- Teks untuk Tender Tersimpan -->
+            <TextView
+                android:id="@+id/text_tender_tersimpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tender Tersimpan"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_below="@id/icon_tender_tersimpan"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                />
+        </RelativeLayout>
+
+        <!-- Tombol 3: Laporan Statistik -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_corners2"
+            android:padding="16dp">
+
+            <!-- Ikon untuk Laporan Statistik -->
+            <ImageView
+                android:id="@+id/icon_laporan_statistik"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:tint="#FF7043"
+                android:src="@drawable/baseline_insert_chart_24"
+                android:layout_centerHorizontal="true"
+                />
+
+            <!-- Teks untuk Laporan Statistik -->
+            <TextView
+                android:id="@+id/text_laporan_statistik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laporan Statistik"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_below="@id/icon_laporan_statistik"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+        </RelativeLayout>
+
+        <!-- Tombol 4: Pengaturan -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_corners2"
+            android:padding="16dp">
+
+            <!-- Ikon untuk Pengaturan -->
+            <ImageView
+                android:id="@+id/icon_pengaturan"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:tint="#FF7043"
+                android:src="@drawable/baseline_settings_24"
+                android:layout_centerHorizontal="true"
+                />
+
+            <!-- Teks untuk Pengaturan -->
+            <TextView
+                android:id="@+id/text_pengaturan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengaturan"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:layout_below="@id/icon_pengaturan"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"/>
+        </RelativeLayout>
+    </GridLayout>
+</RelativeLayout>

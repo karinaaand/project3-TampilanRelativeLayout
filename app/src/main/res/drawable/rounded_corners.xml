@@ -1,0 +1,25 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Item untuk keadaan ketika tombol ditekan -->
+    <item android:state_pressed="true">
+        <!-- Bentuk drawable untuk keadaan ditekan -->
+        <shape>
+            <solid android:color="#FFCCBC" /> <!-- Warna latar belakang oranye muda ketika ditekan -->
+            <stroke android:width="2dp" android:color="#FFCCBC" /> <!-- Garis tepi dengan warna oranye muda -->
+            <corners android:radius="16dp" /> <!-- Sudut bulat dengan radius 16dp -->
+            <padding android:left="4dp" android:top="4dp" android:right="4dp" android:bottom="4dp" /> <!-- Padding di sekeliling bentuk -->
+        </shape>
+    </item>
+
+    <!-- Item untuk keadaan default -->
+    <item>
+        <!-- Bentuk drawable untuk keadaan default -->
+        <shape>
+            <solid android:color="#FFFFFF" /> <!-- Warna latar belakang putih untuk keadaan default -->
+            <stroke android:width="2dp" android:color="#FFCCBC" /> <!-- Garis tepi dengan warna oranye muda -->
+            <corners android:radius="16dp" /> <!-- Sudut bulat dengan radius 16dp -->
+            <padding android:left="4dp" android:top="4dp" android:right="4dp" android:bottom="4dp" /> <!-- Padding di sekeliling bentuk -->
+        </shape>
+    </item>
+
+</selector>

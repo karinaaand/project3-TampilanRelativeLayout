@@ -1,0 +1,26 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lapisan Bayangan -->
+    <item android:left="2dp" android:right="2dp" android:top="4dp" android:bottom="4dp">
+        <!-- Bentuk bayangan -->
+        <shape android:shape="rectangle">
+            <!-- Warna bayangan semi-transparan -->
+            <solid android:color="#1A000000" /> <!-- Warna bayangan dengan transparansi 10% -->
+            <!-- Sudut melengkung untuk bayangan -->
+            <corners android:radius="12dp" /> <!-- Radius sudut disesuaikan dengan lapisan utama -->
+        </shape>
+    </item>
+
+    <!-- Lapisan Utama Tombol -->
+    <item android:left="0dp" android:right="0dp" android:top="0dp" android:bottom="8dp">
+        <!-- Bentuk untuk lapisan utama tombol -->
+        <shape android:shape="rectangle">
+            <!-- Warna latar belakang tombol -->
+            <solid android:color="#FFFFFF" /> <!-- Warna putih untuk latar belakang tombol -->
+            <!-- Sudut melengkung untuk tombol -->
+            <corners android:radius="12dp" /> <!-- Radius sudut konsisten untuk tombol -->
+            <!-- Garis tepi tombol -->
+            <stroke android:width="1dp" android:color="#E0E0E0"/> <!-- Garis tepi berwarna abu-abu terang -->
+        </shape>
+    </item>
+</layer-list>
